@@ -1,0 +1,6 @@
+.sidebar-container {
+    /* background-color: #e4dbdb; */
+    height: calc(100vh - 8.9vh);
+    border-right: 1px solid #e6e0e0;
+    /* overflow-y: hidden; */
+}

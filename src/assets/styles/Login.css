@@ -1,0 +1,42 @@
+.login-button {
+    /* background: #1D9BF0; */
+    background-color: rgb(17, 17, 17);
+    color: whitesmoke;
+    cursor : url('../pngwing.com.png');
+    font-family: 'Roboto Slab', serif;
+    font-size: .9rem;
+}
+label {
+    font-size: .8rem;
+}
+
+.login-with-google {
+    /* background-color: #1D9BF0; */
+    /* color: whitesmoke; */
+    cursor: url('../pngwing.com.png');
+    font-family: 'Roboto Slab', serif;
+    font-size: .9rem;
+    /* background-color: rgb(250, 250, 250); */
+}
+/* 🚀 */
+.google-logo {
+    width: 20px;
+}
+
+.login-input-field {
+    outline: none;
+    background-color: rgb(250, 250, 250);
+}
+
+.login-input-field:focus {
+    outline: none;
+}
+
+.horizontal-line {
+    width: 30%;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.login-form {
+    font-family: 'Roboto Slab', serif;
+}
