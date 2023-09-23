@@ -1,18 +1,12 @@
 import React from 'react'
 import '../assets/styles/Navbar.css'
 import { useSelector } from 'react-redux'
-import Cookies from 'universal-cookie'
+
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const user = useSelector((state) => state.authenticatedUser.value)
-  const cookies = new Cookies()
-  const navigate = useNavigate()
-  const logOutUser = (e) => {
-    e.preventDefault()
-    cookies.remove("TOKEN", {path: "/"});
-    navigate('/crumpled/users/login')
-  }
+  
   return (
     <div className="navbar container mx-auto">
       <div className="flex justify-around">
@@ -29,8 +23,8 @@ const Navbar = () => {
           />
         </div>
         <div className="logout-button md:w-1/6 text-center my-auto text-lg">
-          <span className='authUser mx-4'>{user}</span>
-          <button onClick={logOutUser}>Logout</button>
+          <span className='authUser mx-4'>logged in as {user}</span>
+         
         </div>
       </div>
 
