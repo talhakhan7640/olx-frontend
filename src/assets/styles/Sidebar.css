@@ -1,6 +1,12 @@
 .sidebar-container {
     /* background-color: #e4dbdb; */
     height: calc(100vh - 8.9vh);
-    border-right: 1px solid #e6e0e0;
+    /* border-right: 1px solid #e6e0e0; */
+    /* background-color: rgb(240, 238, 238); */
     /* overflow-y: hidden; */
+}
+.sidebar-item:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+    border-radius: 4px;
 }
