@@ -8,7 +8,7 @@ import Categories from './components/Categories'
 
 function App({children}) {
   return (
-    <div className='home'>
+    <div className='App'>
     <div className='navbar-container py-4'>
         <Navbar />
     </div>
@@ -16,10 +16,10 @@ function App({children}) {
     <div className="sidebar-and-items-container  container mx-auto">
       <div className='grid grid-cols-9 mx-24'>
 
-      <div className='sidebar-conatainer col-span-1'>
+      <div className='sidebar-conatainer col-span-2'>
         <Sidebar />
       </div>
-      <div className='items-container col-span-8'>
+      <div className='items-container col-span-7'>
          <div className="categories-container">
       <Categories />
     </div>

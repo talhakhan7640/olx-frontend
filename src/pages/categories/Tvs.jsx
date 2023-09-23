@@ -2,7 +2,9 @@ import React from 'react'
 
 const Tvs = () => {
   return (
-    <div>Tvs</div>
+    <div>
+      <h1>This is coming from TV category</h1>
+    </div>
   )
 }
 
