@@ -10,11 +10,17 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-family: 'Roboto Slab', serif; */
-   font-family: 'Montserrat', sans-serif; 
+  font-family: 'Roboto Slab', serif;
+   /* font-family: 'Montserrat', sans-serif;  */
+   cursor: url('./assets/cursor.png'), auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body a, body button {
+
+   cursor: url('./assets/cursor.png'), auto;
 }
