@@ -22,6 +22,7 @@ import Tvs from './pages/categories/Tvs.jsx';
 import Beds from './pages/categories/Beds'
 import Mobiles from './pages/categories/Mobiles'
 import Motorcycles from './pages/categories/Motorcycles'
+import Sell from "./components/Sell";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -56,12 +57,13 @@ root.render(
               />
 
               <Route path="categories/">
-                <Route path="tvs" element={<Tvs />} />
-                <Route path="beds" element={<Beds />} />
-                <Route path="mobiles" element={<Mobiles />} />
-                <Route path="motorcycles" element={<Motorcycles />} />
+                <Route path="tvs" element={<AuthRoute component={<Tvs />} />} />
+                <Route path="beds" element={<AuthRoute component={<Beds />} />} />
+                <Route path="mobiles" element={<AuthRoute component={<Mobiles />} />} />
+                <Route path="motorcycles" element={<AuthRoute component={<Motorcycles/>} />} />
               </Route>
 
+              <Route path="items/sell-item/" element={<AuthRoute component={<Sell/>} />} />
             </Route>
           </Routes>
         </App>
