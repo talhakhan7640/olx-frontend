@@ -5,34 +5,26 @@ import { Link } from 'react-router-dom'
 const Categories = () => {
   return (
     <div className='categories-container py-4'>
-        <div className="flex justify-around">
+        <div className="categories flex justify-around">
             {/* <span>Home</span> */}
-            <span>
+            <span className="mx-4">
               <Link to="/crumpled/categories/tvs" className="">
                 TVs
                   </Link>
-            </span>
-            <span>
-              Laptops & Computers</span>
-            <span>
+                </span>
+            <span className="mx-4">
 
               <Link to="/crumpled/categories/beds" className="">
                 Beds
                   </Link>
 
             </span>
-            <span>Sofas</span>
-            <span>Dining</span>
-            <span>Washing Machine</span>
-            <span>Cars</span>
-            <span>Bikes</span>
-            <span>
+            <span className="mx-4">
               <Link to="/crumpled/categories/motorcycles" className="">
                 Motorcycles
                   </Link>
             </span>
-            <span>Sports Equipments</span>
-            <span>
+            <span className="mx-4">
               <Link to="/crumpled/categories/mobiles" className="">
                 Mobiles
                   </Link>
