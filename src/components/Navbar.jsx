@@ -1,19 +1,21 @@
 import React from 'react'
 import '../assets/styles/Navbar.css'
-import { useSelector } from 'react-redux'
-
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-  const user = useSelector((state) => state.authenticatedUser.value)
-  
+  const navigate = useNavigate();
+
+  const sellItem = () => {
+    navigate("crumpled/items/sell-item")
+  }
+    
   return (
     <div className="navbar container mx-auto">
       <div className="flex justify-around">
-        <div className="logo md:w-1/6 text-center my-auto text-lg">
-          Crumpled 🚀
+        <div className="logo md:w-1/7 text-center my-auto text-xl lg:text-2xl">
+          FleaMarket 
         </div>
-        <div className="search-bar hidden md:contents md:w-4/6 text-center my-4 md:my-0">
+        <div className="search-bar hidden md:contents md:w-4/7 text-center my-4 md:my-0">
           <input
             type="search"
             name=""
@@ -22,9 +24,11 @@ const Navbar = () => {
             placeholder="Search products"
           />
         </div>
-        <div className="logout-button md:w-1/6 text-center my-auto text-lg">
-          <span className='authUser mx-4'>logged in as {user}</span>
-         
+        <div className="selling-button md:w-1/7 text-center my-auto">
+          <button className="nineties-button mx-4" onClick={sellItem}>
+            Sell item
+          </button>
+
         </div>
       </div>
 
