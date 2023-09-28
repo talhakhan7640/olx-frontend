@@ -1,4 +1,6 @@
 .categories-container {
+    overflow: auto;
+
 }
 .divider {
     width: 100%;

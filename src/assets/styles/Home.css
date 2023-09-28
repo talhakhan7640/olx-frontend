@@ -1,8 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 .navbar-container {
     background-color: #333;
 }
 .view-product-button-container:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
-    border-radius: 4px;
+    background-color: #efefef;
 }
+.product-description {
+  font-family: 'Courier Prime', monospace;
+
+    font-weight: 600;
+    font-style: italic
+}
+
+
+
+
+.view-product-button-container {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+         }
+
+.view-product-button-container:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+ @media (min-width: 768px) {
+  .view-product-button-container {
+    padding: 0.25em 0.75em;
+  }
+   }

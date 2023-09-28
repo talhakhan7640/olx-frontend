@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 body {
   margin: 0;
@@ -10,9 +11,11 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto Slab', serif;
+  /*font-family: 'Roboto Slab', serif;*/
    /* font-family: 'Montserrat', sans-serif;  */
-   cursor: url('./assets/cursor.png'), auto;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700;
+   cursor: url('./assets/arrow-cursor(1).png'), auto;
 }
 
 code {
