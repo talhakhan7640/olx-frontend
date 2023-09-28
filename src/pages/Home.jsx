@@ -3,10 +3,6 @@ import React from 'react'
 const Home = () => {
   // const cookies  = new Cookies()
 
-  const imageUrl = 'https://picsum.photos/200/300';
-  const productName = 'Mouse';
-  const description = 'Logitech mouse of 12th generation'
-
   const productsList = [
     {
          imageUrl: 'https://apollo-singapore.akamaized.net/v1/files/6ta1e64gro9g1-IN/image;s=780x0;q=60',
@@ -41,14 +37,18 @@ const Home = () => {
    {/* Middle section for the product name and description */}
    <div style={{ flex: 1 }}>
      <div style={{ marginBottom: "10px" }}>
-       <strong>{product.productName}</strong>
+       <strong className="text-xl">{product.productName}</strong>
      </div>
-     <div>{product.description}</div>
+     <div className="product-description">{product.description}</div>
    </div>
 
    {/* Right section for the "View Details" button */}
    <div className='view-product-button-container'>
-     <button style={{ padding: "10px 20px" }}>View Product</button>
+     {/*<button style={{ padding: "10px 20px" }}>View Product</button> */}
+             <button className="nineties-button">
+              View Product
+    </button>
+
    </div>
  </div>
         ))}
