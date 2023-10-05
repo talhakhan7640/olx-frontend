@@ -25,7 +25,7 @@ const Navbar = () => {
           />
         </div>
         <div className="selling-button md:w-1/7 text-center my-auto">
-          <button className="nineties-button mx-4" onClick={sellItem}>
+          <button className="mx-4 text-sm" onClick={sellItem}>
             Sell item
           </button>
 
