@@ -19,34 +19,33 @@ const Sidebar = () => {
     <div className="sidebar-container">
       <ul className="sidebar-items-container px-2 py-2 lg:px-12">
         <li className="sidebar-item py-2 px-4 mx-1 my- mb-8">
-          <span className="authUser text-xl">Welcome {user}</span>
+          <span className="authUser text-lg">Welcome {user}</span>
         </li>
+          <Link to="/crumpled/home" className="">
         <li className="sidebar-item py-2 px-4 mx-1 my-2">
-          <Link to="/crumpled/home" className="text-lg">
             Home
-          </Link>
         </li>
+          </Link>
+          <Link to="/crumpled/messages" className="">
         <li className="sidebar-item py-2  px-4 mx-1 my-3">
-          <Link to="/crumpled/messages" className="text-lg">
             Messages
-          </Link>
         </li>
+          </Link>
+          <Link to="/crumpled/favorite" className="">
         <li className="sidebar-item py-2 px-4 mx-1 my-3">
-          <Link to="/crumpled/favorite" className="text-lg">
             Favorite
+        </li>
           </Link>{" "}
-        </li>
+          <Link to="/crumpled/profile" className="">
         <li className="sidebar-item py-2 px-4 mx-1 my-3">
-          {" "}
-          <Link to="/crumpled/profile" className="text-lg">
             Profile
+        </li>
           </Link>
-        </li>
+          <button onClick={logOutUser} className="">
         <li className="sidebar-item py-2 px-4 mx-1 my-3">
-          <button onClick={logOutUser} className="text-lg">
             Logout
-          </button>
         </li>
+          </button>
       </ul>
     </div>
   );
