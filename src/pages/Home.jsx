@@ -1,60 +1,75 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
 const Home = () => {
   // const cookies  = new Cookies()
+  // const [products, setProducts] = useState({
+  //   imageUrl: "",
+  //   productName: "",
+  //   desription: "",
+  //   productPrice: "",
+  //   productImages: "",
+  // })
+  const [products, setProducts] = useState();
 
-  const productsList = [
-    {
-         imageUrl: 'https://apollo-singapore.akamaized.net/v1/files/6ta1e64gro9g1-IN/image;s=780x0;q=60',
-   productName: 'Mouse',
-   description: 'Logitech mouse of 12th generation.'
-    },
-    {
-         imageUrl: 'https://apollo-singapore.akamaized.net/v1/files/57biqxaomxec2-IN/image;s=780x0;q=60',
-   productName: 'Monitor',
-   description: '1 year used LG 24 inch monitor with HDMI port available. The monitor is in good condition.'
-    },{
-         imageUrl: 'https://apollo-singapore.akamaized.net/v1/files/4zdvu8zbemwz1-IN/image;s=780x0;q=60',
-   productName: 'Keyboard',
-   description: 'Antsports 60% mechanical keyboard. Used only 4 months.'
-    },
-  ]
-  return (
-    <div className="home ">
+  useEffect(() => {
+    const url = "https://olx-api-k7zv.onrender.com/products/";
+    const fetchProducts = async () => {
+      const response = await fetch(url);
+      const products = response.json();
+      return products;
+    };
 
-        {productsList.map((product) => (
-          
- <div style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
-   {/* Left section for the image */}
-   <div style={{ width: "150px", height: "100px", marginRight: "20px" }}>
-     <img
-       src={product.imageUrl}
-       alt="Product"
-       style={{ width: "100%", height: "100%", objectFit: "cover" }}
-     />
-   </div>
+    fetchProducts().then((products) => {
+      console.log(products);
+      if(products.length !== 0){
+      setProducts(products);
+      } else {
+        setProducts(false)
+      }
+    });
+  }, []);
 
-   {/* Middle section for the product name and description */}
-   <div style={{ flex: 1 }}>
-     <div style={{ marginBottom: "10px" }}>
-       <strong className="text-xl">{product.productName}</strong>
-     </div>
-     <div className="product-description">{product.description}</div>
-   </div>
+  if (products) {
+    return (
+      <div className="home px-10">
+        {products.map((products) => (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "20px",
+            }}
+          >
+            <div
+              style={{ width: "150px", height: "100px", marginRight: "20px" }}
+            >
+              <img
+                src={products.imageUrl}
+                alt="Product"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
 
-   {/* Right section for the "View Details" button */}
-   <div className='view-product-button-container'>
-     {/*<button style={{ padding: "10px 20px" }}>View Product</button> */}
-             <button className="nineties-button">
-              View Product
-    </button>
+            <div style={{ flex: 1 }}>
+              <div style={{ marginBottom: "10px" }}>
+                <strong className="text-lg">{products.productName}</strong>
+              </div>
+              <div className="product-description text-sm">
+                {products.productDescription}
+              </div>
+            </div>
 
-   </div>
- </div>
+            <div className="view-product-button-container">
+              <button className="nineties-button text-sm">View Product</button>
+            </div>
+          </div>
         ))}
+      </div>
+    );
+  } else {
+    return <div>There are no products to show...</div>;
+  }
+};
+// console.log(products[0])
 
-    </div>
-  )
-}
-
-export default Home
+export default Home;
